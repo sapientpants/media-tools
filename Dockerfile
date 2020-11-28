@@ -13,12 +13,14 @@ RUN apk add --no-cache \
   boost \
   file \
   ffmpeg \
+  ffmpegthumbnailer \
   gifsicle \
   imagemagick \
   jpeg \
   lcms2 \
   libpng \
-  libsndfile
+  libsndfile \
+  mediainfo
 
 # Jasper - dcraw dependency
 RUN apk add --no-cache --virtual .jaspermakedepends \
