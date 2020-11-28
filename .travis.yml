@@ -1,0 +1,20 @@
+language: minimal
+
+sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    - CURRENT_GIT_REF="${TRAVIS_BRANCH}" # Pass the tag, or target branch for a PR, or the branch
+
+script:
+  - make
+
+deploy:
+  - provider: script
+    script: make deploy
+    on:
+      all_branches: true
+      condition: $TRAVIS_PULL_REQUEST = false
