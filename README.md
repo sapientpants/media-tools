@@ -15,5 +15,5 @@
 ## Usage
 
 ```bash
-$ docker run -v /local/path:/container/path ffmpeg -i /container/path/file.mkv /container/path/file/mp4
+docker run -v /local/path:/container/path ffmpeg -i /container/path/file.mkv /container/path/file/mp4
 ```
